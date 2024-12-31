@@ -1,101 +1,145 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { RotatingProfilePicture } from "@/components/shared/home/RotatingProfilePicture";
+import { StatCounter } from "@/components/shared/home/StatCounter";
+import { Button } from "@/components/ui/button";
+import WorkHuffy from "@assets/work_suit_huffy.jpg";
+import CarnegieHuffy from "@assets/carnegie_huffy.png";
+import PitTechHuffy from "@assets/pit_tech_huffy.jpg";
+import Footer from "@/components/shared/footer";
+import { ServicesSection } from "@/components/shared/home/ServicesSection";
+import { PortfolioShowcase } from "@/components/shared/about/PortfolioShowcase";
+import { SkillsHighlight } from "@/components/shared/home/SkillsHighlight";
+import { StoreShowcase } from "@/components/shared/home/StoreShowcase";
+import { BlogShowcase } from "@/components/shared/home/BlogShowcase";
+import { ContactMe } from "@/components/shared/home/ContactMe";
+import { TracingBeam } from "@/components/ui/tracing-beam";
+import { ArrowRight } from "lucide-react";
+import { WarpBackground } from "@/components/ui/warp-background";
+import Globe from "@/components/ui/globe";
+
+export default function HomePage() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const profileImages = [WorkHuffy, CarnegieHuffy, PitTechHuffy];
+  const customConfig = {
+    baseColor: [0.294, 0.3, 0.51] as [number, number, number], // Red base color
+    markerColor: [1, 0.8, 0.2] as [number, number, number], // Green markers
+    glowColor: [0.5, 0.5, 1] as [number, number, number], // Blue glow
+  };
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+    <div className="bg-neutral-100 dark:bg-neutral-950 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+      <section className="relative min-h-screen overflow-hidden">
+        <WarpBackground>
+          {/* <Ripple /> */}
+          {/* Hero Card */}
+          <div className="sm:relative z-10 min-h-screen flex items-center sm:justify-center p-0  sm:p-4">
+            <Globe
+              className="hidden lg:block lg:top-0 xl:top-0 z-[-1]"
+              config={customConfig}
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+            <div className="sm:container max-w-5xl rounded-3xl bg-neutral-50/50 dark:bg-neutral-950/50 backdrop-blur-xl border border-neutral-200 dark:border-neutral-800 overflow-hidden shadow-lg">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                {/* Left column: Profile picture and name */}
+                <div className="p-2 sm:p-8 text-center md:text-left">
+                  <RotatingProfilePicture
+                    images={profileImages}
+                    size={200}
+                    interval={7000}
+                  />
+                  <motion.h1
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2, duration: 0.8 }}
+                    className="text-4xl md:text-5xl text-center lg:text-left font-bold bg-clip-text text-transparent mt-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 dark:from-blue-600 dark:to-purple-700"
+                  >
+                    Shelby Huffman
+                  </motion.h1>
+                  <motion.h2
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4, duration: 0.8 }}
+                    className="text-xl md:text-2xl text-center lg:text-left font-semibold text-gray-700 dark:text-gray-300 mt-2"
+                  >
+                    Software Engineer & Music Educator
+                  </motion.h2>
+                </div>
+
+                {/* Right column: Stats and buttons */}
+                <div className="p-2 sm:p-8 bg-neutral-100/50 dark:bg-neutral-900/50 rounded-l-3xl">
+                  {/* <div className="relative flex size-full max-w-lg items-center justify-center overflow-hidden rounded-lg border bg-background px-40 pb-40 pt-8 md:pb-60 md:shadow-xl">
+                    <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10"> */}
+                  {/* </span> */}
+                  {/* <div className="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_200%,rgba(0,0,0,0.2),rgba(255,255,255,0))]" />
+                  </div> */}
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.6, duration: 0.8 }}
+                    className="grid grid-cols-3 gap-4 mb-8"
+                  >
+                    <StatCounter
+                      end={10}
+                      duration={5}
+                      label="Years Experience"
+                      plus
+                    />
+                    <StatCounter
+                      end={47}
+                      duration={5}
+                      label="Projects Completed"
+                    />
+                    <StatCounter
+                      end={500}
+                      duration={5}
+                      label="Students Taught"
+                      around
+                    />
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.8, duration: 0.8 }}
+                    className="flex flex-col space-y-4"
+                  >
+                    <Link href="#services" className="w-full">
+                      <Button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white transition-all duration-300">
+                        Explore Services
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </Link>
+                    <Link href="/about" className="w-full">
+                      <Button
+                        variant="outline"
+                        className="w-full border-purple-500 text-purple-500 hover:bg-purple-500 hover:text-neutral-50 dark:hover:text-neutral-950 transition-all duration-300"
+                      >
+                        Learn More
+                      </Button>
+                    </Link>
+                  </motion.div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </WarpBackground>
+      </section>
+      <TracingBeam>
+        <SkillsHighlight />
+        <ServicesSection />
+        <StoreShowcase />
+        <BlogShowcase />
+        <PortfolioShowcase />
+        <ContactMe />
+      </TracingBeam>
+      <Footer />
     </div>
   );
 }
