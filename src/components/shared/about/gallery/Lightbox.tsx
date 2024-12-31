@@ -21,7 +21,9 @@ const Lightbox: React.FC<LightboxProps> = ({
   useEffect(() => {
     const loadImage = async () => {
       try {
-        const image = await import(`@assets/${images[currentIndex]}`);
+        const image = await import(
+          `../../../../assets/${images[currentIndex]}`
+        );
         setImageSrc(image.default.src);
       } catch (error) {
         console.error(`Failed to load image: ${images[currentIndex]}`, error);

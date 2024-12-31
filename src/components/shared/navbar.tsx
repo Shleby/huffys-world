@@ -16,6 +16,7 @@ import { ThemeToggle } from "../theme/theme-toggle";
 import RepoDropdown from "./navbar/source-code";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 function ClockComponent() {
   const [time, setTime] = useState(new Date());
@@ -57,9 +58,9 @@ export default function Navbar({ className }: { className?: string }) {
     >
       <div className="px-4 py-1 mx-auto h-full flex items-center justify-between">
         <div className="flex items-center space-x-2">
-          <a href="/" className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center space-x-2">
             <AppLogo />
-          </a>
+          </Link>
         </div>
 
         {/* Desktop Menu */}
@@ -217,18 +218,18 @@ export default function Navbar({ className }: { className?: string }) {
                   <h2 className="text-lg font-semibold mb-2 text-primary">
                     Blog
                   </h2>
-                  <a
+                  <Link
                     href="/blog/music"
                     className="block py-2 text-sm hover:text-primary transition-colors"
                   >
                     Music Blog / Videos
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="/blog/technical"
                     className="block py-2 text-sm hover:text-primary transition-colors"
                   >
                     Technical Blog
-                  </a>
+                  </Link>
                 </div>
               </nav>
               <div className="flex flex-col gap-4 mt-8">

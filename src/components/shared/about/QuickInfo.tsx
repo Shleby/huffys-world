@@ -2,7 +2,7 @@
 "use client";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MapPin, Mail, Github, Linkedin, Globe, Calendar } from "lucide-react";
+import { MapPin, Mail, Globe } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { useState } from "react";
 import { Separator } from "@/components/ui/separator";
@@ -40,7 +40,8 @@ export function QuickInfo() {
       <CardHeader>
         <CardTitle className="text-2xl">Quick Info</CardTitle>
         <q className="italic text-left text-sm mb-4 text-neutral-600 dark:text-neutral-300">
-          If you do what you love, then you'll never work a day in your life.
+          If you do what you love, then you&apos;ll never work a day in your
+          life.
         </q>{" "}
         - My Father
       </CardHeader>
@@ -182,16 +183,5 @@ function InfoItem({
       {icon}
       <span className="text-sm">{text}</span>
     </div>
-  );
-}
-
-function Testimonial({ quote, author }: { quote: string; author: string }) {
-  return (
-    <blockquote className="text-sm text-neutral-600 dark:text-neutral-300 bg-neutral-50 dark:bg-neutral-900 p-3 rounded-lg">
-      "{quote}"
-      <span className="block text-xs text-neutral-500 dark:text-neutral-400 mt-1">
-        — {author}
-      </span>
-    </blockquote>
   );
 }

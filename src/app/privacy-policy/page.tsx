@@ -15,7 +15,7 @@ export default function PrivacyPolicy() {
           <section className="mb-6">
             <h2 className="text-2xl font-semibold mb-3">1. Introduction</h2>
             <p>
-              Welcome to Huffy's World. This Privacy Policy explains how we
+              Welcome to Huffy&apos;s World. This Privacy Policy explains how we
               collect, use, disclose, and safeguard your information when you
               visit our website or use our services.
             </p>

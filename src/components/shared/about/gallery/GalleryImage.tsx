@@ -21,12 +21,13 @@ const GalleryImage: React.FC<GalleryImageProps> = ({
   const [showLightbox, setShowLightbox] = useState(false);
 
   useEffect(() => {
-    import(`@assets/${src}`)
+    import(`../../../../assets/${src}`)
       .then((image) => {
         setImageSrc(image.default.src);
       })
       .catch((error) => {
         console.error(`Failed to load image: ${src}`, error);
+        setImageSrc("/fallback-image.png"); // Provide a fallback image path
       });
   }, [src]);
 

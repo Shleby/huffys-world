@@ -102,11 +102,12 @@ const TechnicalCareerPage: React.FC = () => {
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
             I started learning percussion in 2010 as a middle schooler at
             Choctaw Middle School. We practiced basic rhythms on practice pads
-            and drummed "8's" for hours on our beginner Vic Firth percussion
-            kits. Out of all my classmates, I was the only one who wanted to try
-            bells and other keyboard percussion. I didn’t even know four mallets
-            existed then—just that I was excited to learn! Our teacher was a
-            brass player, but she did a great job of teaching us the basics.
+            and drummed &quot;8&apos;s&quot; for hours on our beginner Vic Firth
+            percussion kits. Out of all my classmates, I was the only one who
+            wanted to try bells and other keyboard percussion. I didn&apos;t
+            even know four mallets existed then—just that I was excited to
+            learn! Our teacher was a brass player, but she did a great job of
+            teaching us the basics.
           </p>
           {/* <div className="grid grid-cols-2 gap-4">
             <Image
@@ -205,9 +206,10 @@ const TechnicalCareerPage: React.FC = () => {
             Independent A (about 3-4 years old at that time). I joined
             mid-season to fill a vibraphone hole, which opened my eyes to new
             levels of percussion and introduced me to great teachers like Jacob
-            Carter, Tyler Simmons, and Beth Barnes. Our show was called 'Urban
-            Roots', where we played a mix of ho-down country music and the tried
-            and true 'Pure Imagination' from Willy Wonka.
+            Carter, Tyler Simmons, and Beth Barnes. Our show was called
+            &apos;Urban Roots&apos;, where we played a mix of ho-down country
+            music and the tried and true &apos;Pure Imagination&apos; from Willy
+            Wonka.
           </p>
           <div className="grid grid-cols-2 gap-4">
             <Image
@@ -243,9 +245,9 @@ const TechnicalCareerPage: React.FC = () => {
             practicing daily with my buddy Lee. Unfortunately, the OU group
             folded before our first show, so I ended up returning to my Norman
             group (Resistance Indoor Percussion) on vibes. Our show was called
-            'Displaced' and was a blast to be a part of. We played on the back
-            of the field, which was challenging due to the nature of the
-            listening responsibilities. After this season, I decided to step
+            &apos;Displaced&apos; and was a blast to be a part of. We played on
+            the back of the field, which was challenging due to the nature of
+            the listening responsibilities. After this season, I decided to step
             away from my high school band program and focus on academics and
             other interests.
           </p>
@@ -305,15 +307,16 @@ const TechnicalCareerPage: React.FC = () => {
           </h2>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
             I auditioned for the Mandarins Drum and Bugle Corps and got cut,
-            meaning I didn't get a spot. A few weeks later I got a call asking
-            if I could fill a spot in their vibraphone line. This was a humbling
-            experience and I was honored to be given a second chance. As quickly
-            as I could, I hopped on a flight to join them for their spring
-            training in Sacremento California. It was my first summer traveling
-            and performing around the country. I learned from Shelby Shelton,
-            Patrick Manning, Sean Womack, and Jimmy Madonia—players from all
-            over the U.S. This was a huge step beyond the “Oklahoma bubble.” I
-            learned a lot about myself and my playing that summer.
+            meaning I didn&apos;t get a spot. A few weeks later I got a call
+            asking if I could fill a spot in their vibraphone line. This was a
+            humbling experience and I was honored to be given a second chance.
+            As quickly as I could, I hopped on a flight to join them for their
+            spring training in Sacremento California. It was my first summer
+            traveling and performing around the country. I learned from Shelby
+            Shelton, Patrick Manning, Sean Womack, and Jimmy Madonia—players
+            from all over the U.S. This was a huge step beyond the
+            &quot;Oklahoma bubble.&quot; I learned a lot about myself and my
+            playing that summer.
           </p>
           <div className="grid grid-cols-2 gap-4">
             <Image

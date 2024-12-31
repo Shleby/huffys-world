@@ -22,7 +22,7 @@ import { WarpBackground } from "@/components/ui/warp-background";
 import Globe from "@/components/ui/globe";
 
 export default function HomePage() {
-  const [isVisible, setIsVisible] = useState(false);
+  const [, setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);

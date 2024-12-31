@@ -6,14 +6,12 @@ import { Button } from "@/components/ui/button";
 import {
   Code,
   Cpu,
-  Users,
   Settings,
   Landmark,
   Search,
   Server,
   GitBranch,
   Shield,
-  ChevronDown,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import {

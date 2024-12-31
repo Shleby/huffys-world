@@ -89,9 +89,7 @@ const categories: Category[] = [
 ];
 
 export function StoreShowcase() {
-  const [selectedCategory, setSelectedCategory] = useState<Category | null>(
-    null
-  );
+  const [, setSelectedCategory] = useState<Category | null>(null);
 
   return (
     <section className="py-24 bg-neutral-100 dark:bg-neutral-950">
@@ -111,7 +109,7 @@ export function StoreShowcase() {
           className="text-xl text-center mb-16 text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
         >
           Elevate your projects with our curated collection of tools, templates,
-          and creative works. From code to music, we've got you covered.
+          and creative works. From code to music, we&apos;ve got you covered.
         </motion.p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {categories.map((category, index) => (

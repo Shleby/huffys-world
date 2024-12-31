@@ -10,16 +10,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Globe,
-  Github,
-  Linkedin,
-  ExternalLink,
-} from "lucide-react";
-import Link from "next/link";
+import { Mail, MapPin, Globe, Github, Linkedin } from "lucide-react";
 import WorkShelby from "@assets/work_suit_huffy.jpg";
 import Image from "next/image";
 import { CONTACT_INFO, SOCIAL_LINKS } from "@/config/constants";
@@ -57,12 +48,12 @@ export function ContactMe() {
           transition={{ duration: 0.5 }}
           className="text-4xl md:text-5xl font-bold text-center mb-8 text-neutral-900 dark:text-neutral-100"
         >
-          Let's Connect
+          Let&apos;s Connect
         </motion.h2>
         <p className="text-xl text-center mb-16 text-neutral-700 dark:text-neutral-300 max-w-3xl mx-auto">
-          Whether you're in Oklahoma City or anywhere else in the world, I'm
-          here to help. Reach out for collaborations, consultations, or just to
-          say hello!
+          Whether you&apos;re in Oklahoma City or anywhere else in the world,
+          I&apos;m here to help. Reach out for collaborations, consultations, or
+          just to say hello!
         </p>
         <div className="flex justify-center mb-16">
           <motion.div

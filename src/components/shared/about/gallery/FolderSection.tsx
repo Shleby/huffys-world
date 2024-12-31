@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import GalleryImage from "./GalleryImage";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import SearchAndSort from "./Search";
 
 interface FolderSectionProps {
@@ -18,6 +18,10 @@ const FolderSection: React.FC<FolderSectionProps> = ({ folder, images }) => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const currentSectionRef = sectionRef.current;
+
+    if (!currentSectionRef) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -28,14 +32,10 @@ const FolderSection: React.FC<FolderSectionProps> = ({ folder, images }) => {
       { rootMargin: "200px 0px" }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
+    observer.observe(currentSectionRef);
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
+      observer.unobserve(currentSectionRef);
     };
   }, []);
 

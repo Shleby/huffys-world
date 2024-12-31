@@ -3,7 +3,7 @@ import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { TypeIcon as type, LucideIcon } from "lucide-react";
+import { LucideIcon } from "lucide-react";
 
 const transition = {
   type: "spring",
@@ -138,7 +138,14 @@ export const ProductItem = ({
   );
 };
 
-export const HoveredLink = ({ children, ...rest }: any) => {
+import { LinkProps } from "next/link";
+
+export const HoveredLink = ({
+  children,
+  ...rest
+}: {
+  children: React.ReactNode;
+} & LinkProps) => {
   return (
     <Link
       {...rest}

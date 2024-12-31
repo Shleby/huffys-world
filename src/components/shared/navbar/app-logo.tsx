@@ -8,7 +8,7 @@ export default function AppLogo() {
       </div>
 
       <span className="text-lg font-bold text-neutral-900 dark:text-neutral-100">
-        Huffy's World
+        Huffy&apos;s World
       </span>
     </div>
   );

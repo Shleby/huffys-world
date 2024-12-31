@@ -15,9 +15,7 @@ export default function Footer() {
   const { theme, setTheme } = useTheme();
   const [currentTime, setCurrentTime] = useState(new Date());
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
-  const [timeZone, setTimeZone] = useState(
-    Intl.DateTimeFormat().resolvedOptions().timeZone
-  );
+  const [timeZone] = useState(Intl.DateTimeFormat().resolvedOptions().timeZone);
 
   const socialLinks = useMemo(
     () => [
@@ -59,7 +57,7 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="lg:col-span-2">
-            <h3 className="text-3xl font-bold mb-4">Huffy's World</h3>
+            <h3 className="text-3xl font-bold mb-4">Huffy&apos;s World</h3>
             <p className="mb-6">
               Explore the world of web design with interactive and user-friendly
               experiences. This site is open-sourced and available for anyone to
@@ -180,7 +178,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
           <p>
-            &copy; {new Date().getFullYear()} Huffy's World. All rights
+            &copy; {new Date().getFullYear()} Huffy&apos;s World. All rights
             reserved.
           </p>
           <div className="flex items-center space-x-4 mt-4 md:mt-0">

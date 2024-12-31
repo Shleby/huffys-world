@@ -12,7 +12,6 @@ import {
   Radio,
   Clapperboard,
   Headphones,
-  ChevronDown,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import {
@@ -260,8 +259,8 @@ export function MusicalServicesOverview() {
             Have a unique musical project?
           </h3>
           <p className="text-gray-600 dark:text-gray-400 mb-6">
-            Let's discuss how we can tailor our services to meet your specific
-            musical needs.
+            Let&apos;s discuss how we can tailor our services to meet your
+            specific musical needs.
           </p>
           <Button size="lg">Request a Custom Quote</Button>
         </motion.div>
